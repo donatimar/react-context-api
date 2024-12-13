@@ -9,7 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import PostsPage from "./pages/PostsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
-// context
+// Context
 import { PostsProvider } from "./contexts/PostsContext";
 
 function App() {
