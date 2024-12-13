@@ -8,7 +8,7 @@ export default function PostsList() {
   return (
     <div className="row">
       {posts.map((post) => (
-        <div key={post.id} className="col-4 mb-3">
+        <div key={post.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <PostCard post={post} />
         </div>
       ))}
