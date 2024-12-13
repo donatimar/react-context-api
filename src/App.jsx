@@ -9,18 +9,23 @@ import AboutPage from "./pages/AboutPage";
 import PostsPage from "./pages/PostsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+// context
+import { PostsProvider } from "./contexts/PostsContext";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route Component={DefaultLayout}>
-          <Route path="/" Component={HomePage} />
-          <Route path="/about" Component={AboutPage} />
-          <Route path="/posts" Component={PostsPage} />
-          <Route path="*" Component={NotFoundPage} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <PostsProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route Component={DefaultLayout}>
+            <Route path="/" Component={HomePage} />
+            <Route path="/about" Component={AboutPage} />
+            <Route path="/posts" Component={PostsPage} />
+            <Route path="*" Component={NotFoundPage} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </PostsProvider>
   );
 }
 
